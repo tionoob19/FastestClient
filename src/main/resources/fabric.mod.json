@@ -9,8 +9,10 @@
   "license": "All Rights Reserved",
   "environment": "client",
   "entrypoints": {
+    "preLaunch": ["dev.fastestclient.FastestPreLaunch"],
     "client": ["dev.fastestclient.FastestCore"]
   },
+  "mixins": ["fastestcore.mixins.json"],
   "depends": {
     "fabricloader": ">=0.14.0",
     "minecraft": "1.16.5",
