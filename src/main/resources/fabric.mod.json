@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "fastestcore",
+  "version": "${version}",
+  "name": "FastestCore",
+  "description": "Essential Fastest Client mod.",
+  "authors": ["Tionoob19"],
+  "contact": {},
+  "license": "All Rights Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.fastestclient.FastestCore"]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "1.16.5",
+    "java": ">=8"
+  }
+}
