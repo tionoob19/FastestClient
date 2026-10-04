@@ -4,6 +4,7 @@
   "package": "dev.fastestclient.mixin",
   "compatibilityLevel": "JAVA_8",
   "client": [
+    "MinecraftClientMixin",
     "TitleScreenMixin"
   ],
   "injectors": {

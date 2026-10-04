@@ -1,5 +1,6 @@
 package dev.fastestclient.mixin;
 
+import dev.fastestclient.FastestConfig;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.client.util.math.MatrixStack;
@@ -18,7 +19,10 @@ public abstract class TitleScreenMixin extends Screen {
 
     @Inject(method = "render", at = @At("TAIL"))
     private void fastestcore$renderCredit(MatrixStack matrices, int mouseX, int mouseY, float delta, CallbackInfo ci) {
-        String text = "Fastest Client";
+        String text = FastestConfig.get("credit.text");
+        if (text.isEmpty()) {
+            return;
+        }
         int x = this.width - this.textRenderer.getWidth(text) - 2;
         int y = this.height - 20;
         drawStringWithShadow(matrices, this.textRenderer, text, x, y, 0xFFFFFF);
