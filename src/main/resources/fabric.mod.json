@@ -3,20 +3,12 @@
   "id": "fastestcore",
   "version": "${version}",
   "name": "FastestCore",
-  "description": "Essential Fastest Client mod.",
+  "description": "Essential Fastest Client mod: branding, title/pause logo, window icon.",
   "authors": ["Tionoob19"],
-  "contact": {},
-  "license": "All Rights Reserved",
+  "license": "All-Rights-Reserved",
+  "icon": "assets/fastestcore/icon.png",
   "environment": "client",
-  "entrypoints": {
-    "preLaunch": ["dev.fastestclient.FastestPreLaunch"],
-    "client": ["dev.fastestclient.FastestCore"]
-  },
-  "mixins": ["fastestcore.mixins.json"],
-  "depends": {
-    "fabricloader": ">=0.14.0",
-    "minecraft": "1.16.5",
-    "java": ">=8",
-    "fabric-resource-loader-v0": "*"
-  }
+  "entrypoints": { "client": ["dev.fastestclient.core.client.FastestCoreClient"] },
+  "mixins": [{ "config": "fastestcore.mixins.json", "environment": "client" }],
+  "depends": { "fabricloader": ">=0.11.0", "minecraft": "1.16.5", "fabric": "*" }
 }
