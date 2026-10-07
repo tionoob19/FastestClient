@@ -1,8 +1,0 @@
-{
-  "required": true,
-  "minVersion": "0.8",
-  "package": "dev.fastestclient.core.mixin",
-  "compatibilityLevel": "JAVA_8",
-  "client": ["MinecraftClientMixin", "PlayerListHudMixin", "PlayerEntityMixin"],
-  "injectors": { "defaultRequire": 0 }
-}
